@@ -78,16 +78,16 @@ var getForecast =  function(forecast) {
     uvIndexEl.textContent = forecast.current.uvi;
 
     // add appropriate background color to current uv index number
-    if (forecast.current.uvi <= 2) {
-      var uvIndexEl= document.querySelector('#currentUVIndex');
-      uvIndexEl.addClass("favorable");
-    } else if (forecast.current.uvi >= 3 && forecast.current.uvi <= 7) {
-      var uvIndexEl= document.querySelector('#currentUVIndex');
-      uvIndexEl.className("moderate");
-    } else {
-      var uvIndexEl= document.querySelector('#currentUVIndex');
-      uvIndexEl.className("severe");
-    }
+    //if (forecast.current.uvi <= 2) {
+    //  var uvIndexEl= document.querySelector('#currentUVIndex');
+    //   uvIndexEl.addClass("favorable");
+    // } else if (forecast.current.uvi >= 3 && forecast.current.uvi <= 7) {
+    //  var uvIndexEl= document.querySelector('#currentUVIndex');
+    //   uvIndexEl.className("moderate");
+    // } else {
+    //   var uvIndexEl= document.querySelector('#currentUVIndex');
+    //   uvIndexEl.className("severe");
+    // }
 };
 
 
