@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- standard bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>Weather Dashboard</title>
+</head>
+
+<body class="flex-column min-100-vh">
+  <header class="hero">
+    <h1 class="app-title"><i class="fab fa-github"></i> Weather Dashboard</h1>
+  </header>
+  
+  <main class="flex-row justify-space-between">
+    <div class="col-12 col-md-4">
+        <h3 class="card-header text-uppercase">Search for a City:</h3>
+        <input name="city" id="cityInput" type="text" autofocus="true" class="form-input" />
+        <button  class="btn" id="search">Search</button>
+        <div id="search-history-container" ></div>
+    </div>
+
+    <div class="col-12 col-md-8">
+      <div class="row d-block">
+        <h2 class="title is-5 has-text-weight-bold mb-0 has-text-white">
+          <span id="currentCity"></span>
+          <img id="currentIcon" src="" alt="" style="background-color:grey"></img>
+        </h2>
+
+        <p class="m-0 pb-3 has-text-weight-semibold">Temp: <span id="currentTemp"></span></p>
+        <p class="m-0 pb-3 has-text-weight-semibold">Wind: <span id="currentWind"></span></p>
+        <p class="m-0 pb-3 has-text-weight-semibold">Humidity: <span id="currentHumidity"></span></p>
+        <p class="m-0 pb-3 has-text-weight-semibold">UV Index:</p>
+        <p class="current-number rounded" id="currentUVIndex"></p>
+      </div>
+     
+      <div class="row future-forecast-container d-block">
+          <!-- 5 day forecast title-->
+          <h2 class="future-forecast-title" id="future-forecast-title"></h2>
+          <div id="forecasts-cards-container" class="forecasts-cards-container d-flex justify-content-around">
+              <!-- future day forecard card -->
+              <div class="future-card bg-primary rounded">
+                  <p class="future-date" id="future-date-1"></p>
+                  <img id="future-icon-1" src="" alt="">
+                  <p class="future-temp" id="future-temp-1"></p>
+                  <p class="future-humidity" id="future-humidity-1"></p>
+              </div>
+              <div class="future-card bg-primary rounded">
+                  <p class="future-date" id="future-date-2"></p>
+                  <img id="future-icon-2" src="" alt="">
+                  <p class="future-temp" id="future-temp-2"></p>
+                  <p class="future-humidity" id="future-humidity-2"></p>
+              </div>
+              <div class="future-card bg-primary rounded">
+                  <p class="future-date" id="future-date-3"></p>
+                  <img id="future-icon-3" src="" alt="">
+                  <p class="future-temp" id="future-temp-3"></p>
+                  <p class="future-humidity" id="future-humidity-3"></p>
+              </div>
+              <div class="future-card bg-primary rounded">
+                  <p class="future-date" id="future-date-4"></p>
+                  <img id="future-icon-4" src="" alt="">
+                  <p class="future-temp" id="future-temp-4"></p>
+                  <p class="future-humidity" id="future-humidity-4"></p>
+              </div>
+              <div class="future-card bg-primary rounded">
+                  <p class="future-date" id="future-date-5"></p>
+                  <img id="future-icon-5" src="" alt="">
+                  <p class="future-temp" id="future-temp-5"></p>
+                  <p class="future-humidity" id="future-humidity-5"></p>
+              </div>
+          </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
